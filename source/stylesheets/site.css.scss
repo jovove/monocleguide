@@ -20,10 +20,10 @@ a {
 }
 
 .accordion {
-  color: #444;
   cursor: pointer;
-  height: 16.7vh;
+  height: 190px;
   width: 100%;
+  padding: 0 30px;
   border: none;
   text-align: left;
   outline: none;
@@ -32,43 +32,103 @@ a {
   font-family: "plantin", sans-serif;
   font-weight: 300;
   font-style: normal;
-  font-size: 42px;
+  font-size: 52px;
   line-height: 0.9em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-  @media only screen and (max-height: 90px) {
+  .title {
+    display: flex;
+    align-items: center;
+    color: #2b2b2b;
+
+    img {
+      margin-right: 20px;
+    }
+
+    &.white {
+      color: #ffffff;
+    }
+  }
+
+  .book-collection {
+    p {
+      margin: 0;
+      font-size: 16px;
+      line-height: 1;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    font-size: 30px;
+  }
+
+  @media only screen and (max-width: 400px) {
     font-size: 18px;
   }
-
-  @media only screen and (max-height: 200px) {
-    font-size: 16px;
-  }
 }
 
-.active,
-.accordion:hover {
-  background-color: #ccc;
-}
+// .active,
+// .accordion:hover {
+//   background-color: #ccc;
+// }
 
-.accordion:after {
-  content: "\002B";
-  color: #777;
-  font-weight: bold;
-  float: right;
-  margin-left: 5px;
-}
+// .accordion:after {
+//   content: "\002B";
+//   color: #777;
+//   font-weight: bold;
+//   float: right;
+//   margin-left: 5px;
+// }
 
 /* icon */
-.active:after {
-  content: "\2212";
-}
+// .active:after {
+//   content: "\2212";
+// }
 
 /* animation */
 .panel {
-  padding: 0 18px;
+  height: 1600px;
+  padding: 0 68px;
   background-color: white;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
+  display: flex;
+  text-align: left;
+
+  .text-details {
+    height: 400px;
+    max-width: 300px;
+    padding: 100px 0;
+
+    ul {
+      padding-inline-start: 0;
+    }
+    li {
+      list-style: none;
+    }
+  }
+
+  .text-content {
+    width: 600px;
+    margin-left: 160px;
+    padding: 100px 0;
+    line-height: 1.4em;
+    font-size: 16px;
+
+    .img-row {
+      display: flex;
+      margin-top: 60px;
+      padding-bottom: 100px;
+
+      img {
+        width: 400px;
+        height: 100%;
+      }
+    }
+  }
 }
 
 .yellow {
