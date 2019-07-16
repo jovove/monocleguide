@@ -92,8 +92,7 @@ a {
 
 /* animation */
 .panel {
-  height: 1600px;
-  padding: 0 68px;
+  padding: 0 68px 0 172px;
   background-color: white;
   max-height: 0;
   overflow: hidden;
@@ -102,9 +101,9 @@ a {
   text-align: left;
 
   .text-details {
-    height: 400px;
+    min-height: 300px;
     max-width: 300px;
-    padding: 100px 0;
+    padding: 20px 0;
 
     ul {
       padding-inline-start: 0;
@@ -115,9 +114,10 @@ a {
   }
 
   .text-content {
-    width: 600px;
-    margin-left: 160px;
-    padding: 100px 0;
+    height: 100%;
+    width: 450px;
+    margin-left: 100px;
+    padding: 20px 0 100px;
     line-height: 1.4em;
     font-size: 16px;
 
