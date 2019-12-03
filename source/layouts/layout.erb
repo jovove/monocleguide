@@ -9,7 +9,10 @@
     <!-- Use the title from a page's frontmatter if it has one -->
     <title><%= current_page.data.title || "Monocle Guide to..." %></title>
     <link rel="stylesheet" href="https://use.typekit.net/lnc2fsd.css">
-
+    <meta property="og:title" content="Monocle Guide to..." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://monocleguide.netlify.com" />
+    <meta property="og:image" content="./images/og-monocleguide.png" />
 
     <%= stylesheet_link_tag "site" %>
   </head>
